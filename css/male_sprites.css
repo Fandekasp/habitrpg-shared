@@ -25,7 +25,8 @@
 .m_armor_3,
 .m_armor_2,
 .m_armor_1,
-.m_armor_0,
+.m_armor_0_v2,
+.m_armor_0_v1,
 .m_skin_dead,
 .m_skin_orc,
 .m_skin_asian,
@@ -80,7 +81,8 @@
 .m_armor_3 {background-position: -2160px 0; width: 90px; height: 90px}
 .m_armor_2 {background-position: -2250px 0; width: 90px; height: 90px}
 .m_armor_1 {background-position: -2340px 0; width: 90px; height: 90px}
-.m_armor_0 {background-position: -2430px 0; width: 90px; height: 90px}
+.m_armor_0_v2 {background-position: -2790px 0; width: 90px; height: 90px}
+.m_armor_0_v1 {background-position: -2880px 0; width: 90px; height: 90px}
 
 /* Basic Skins */
 .m_skin_dead {background-position: -2520px 0; width: 90px; height: 90px}
