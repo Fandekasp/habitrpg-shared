@@ -92,7 +92,9 @@ items = module.exports.items =
     #Watermelon:       text: 'Watermelon', target: 'Golden'
     #SeaWeed:          text: 'SeaWeed', target: 'Golden'
 
+  gears:
     Saddle:           text: 'Saddle', value: 5, notes: 'Instantly raises your pet into a mount.'
+    Collar:           text: 'Collar', value: 1, notes: 'Give a name to your pet'
 
 # we somtimes want item arrays above in reverse order, for backward lookups (you'll see later in the code)
 reversed = {}
