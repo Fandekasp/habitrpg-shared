@@ -99,6 +99,7 @@ module.exports =
         lastDrop: { date: +new Date, count: 0 }
         eggs: {}
         food: {}
+        gears: {}
         hatchingPotions: {}
         pets: {}
         mounts: {}

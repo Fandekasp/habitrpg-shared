@@ -8732,7 +8732,7 @@ var global=self;/**
 
 },{}],4:[function(require,module,exports){
 (function() {
-  var HP, XP, eggs, hatchingPotions, helpers, items, moment, obj, preenHistory, randomDrop, updateStats, _, _ref,
+  var HP, XP, eggs, hatchingPotions, gears, helpers, items, moment, obj, preenHistory, randomDrop, updateStats, _, _ref,
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   moment = require('moment');
@@ -8743,7 +8743,7 @@ var global=self;/**
 
   items = require('./items.coffee');
 
-  _ref = items.items, eggs = _ref.eggs, hatchingPotions = _ref.hatchingPotions;
+  _ref = items.items, eggs = _ref.eggs, hatchingPotions = _ref.hatchingPotions, gears = _ref.gears;
 
   XP = 15;
 
@@ -9527,6 +9527,7 @@ var process=require("__browserify_process");(function() {
           },
           eggs: {},
           food: {},
+          gears: {},
           hatchingPotions: {},
           pets: {},
           mounts: {}
@@ -10427,12 +10428,19 @@ try {
       Honey: {
         text: 'Honey',
         target: 'Golden'
-      },
-      Saddle: {
+      }
+    food: {
+       Saddle: {
         text: 'Saddle',
         value: 5,
         notes: 'Instantly raises your pet into a mount.'
-      }
+      },
+       Collar: {
+        text: 'Collar',
+        value: 1,
+        notes: 'Give a name to your pet'
+      },
+
     }
   };
 
@@ -10472,6 +10480,14 @@ try {
       value: 1,
       name: k,
       notes: "Feed this to a pet and it may grow into a sturdy steed."
+    });
+  });
+
+  _.each(items.gears, function(gear, k) {
+    return _.defaults(gear, {
+      value: 1,
+      name: k,
+      notes: "Give your pet a special gear"
     });
   });
 

@@ -94,7 +94,7 @@ items = module.exports.items =
 
   gears:
     Saddle:           text: 'Saddle', value: 5, notes: 'Instantly raises your pet into a mount.'
-    Collar:           text: 'Collar', value: 1, notes: 'Give a name to your pet'
+    Collar:           text: 'Collar', notes: 'Give a name to your pet'
 
 # we somtimes want item arrays above in reverse order, for backward lookups (you'll see later in the code)
 reversed = {}
@@ -117,6 +117,9 @@ _.each items.hatchingPotions, (pot,k) ->
 
 _.each items.food, (food,k) ->
   _.defaults food, {value: 1, name: k, notes: "Feed this to a pet and it may grow into a sturdy steed."}
+
+_.each items.gear, (gear,k) ->
+  _.defaults gear, {value: 1, name: k, notes: "Custom gear for your pet"}
 
 module.exports.buyItem = (user, type) ->
   nextItem =
